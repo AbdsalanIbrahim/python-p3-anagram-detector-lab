@@ -1,6 +1,11 @@
-#!/usr/bin/env python3
+# lib/debug.py
 
 from anagram import Anagram
 
 if __name__ == '__main__':
-    import ipdb; ipdb.set_trace()
+    # Test cases
+    listen = Anagram("listen")
+    print(listen.match(["enlists", "google", "inlets", "banana"]))  # Expected: ['inlets']
+
+    another = Anagram("enlist")
+    print(another.match(["listen", "silent", "hippopotamus"]))  # Expected: ['listen', 'silent']
